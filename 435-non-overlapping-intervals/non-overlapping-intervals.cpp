@@ -45,7 +45,7 @@ public:
         int intervalRemoved = 0;
         int freeTime = arr[0][1];
         for(int i = 1; i < n; i++){
-            if(i != 0 && arr[i][0] < freeTime){
+            if(arr[i][0] < freeTime){
                 intervalRemoved++;
                 
             }
