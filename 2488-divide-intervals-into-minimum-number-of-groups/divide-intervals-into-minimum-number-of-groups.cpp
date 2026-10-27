@@ -56,13 +56,13 @@ public:
         int currGrps = 0;
         int maxGroups = 0;
         while(i < n && j < n){
-            if(arrival[i] <= departure[j]){
+            if(arrival[j] <= departure[i]){
                 currGrps++;
                 maxGroups = max(maxGroups , currGrps);
-                i++;
-            }
-            else{
                 j++;
+            }
+            else if(arrival[j] > departure[i]){
+                i++;
                 currGrps--;
                 // j++;
             }
